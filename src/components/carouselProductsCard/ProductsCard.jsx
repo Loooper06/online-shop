@@ -112,7 +112,11 @@ const ProductsCard = (props) => {
   let priceAfterDiscount = afterDiscount.toFixed(2);
 
   const addToCart = () => {
-    props.onUpdate()
+    if(props.onUpdate) {
+      props.onUpdate()
+    } else {
+      
+    }
     let colorAddtoCart = modalProductColor.find((color) => color.active);
     let sizeAddtoCart = modalProductSize.find((size) => size.active);
 

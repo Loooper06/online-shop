@@ -11,6 +11,7 @@ import './ShopProductCard.css'
 
 const ShopProductCard = (props) => {
   const [quickShow, setQuickShow] = useState(false);
+  const [onCart , setOnCart] = useState([])
   const [modalImages, setModalImages] = useState([
     { id: 1, img: props.img, active: true },
     { id: 2, img: props.subImg, active: false },
@@ -66,6 +67,12 @@ const ShopProductCard = (props) => {
     setModalImages(modalUpdatedImages);
   }, []);
 
+  useEffect(() => {
+    fetch('https://azeno-3045b-default-rtdb.firebaseio.com/cart.json')
+    .then(response => response.json())
+    .then(data => setOnCart(Object.entries(data)))
+  } , [])
+
   const activeImg = (imgID) => {
     let images = [...modalImages];
     let imgActivated = images.map((item) => {
@@ -113,7 +120,6 @@ const ShopProductCard = (props) => {
   let priceAfterDiscount = afterDiscount.toFixed(2);
 
   const addToCart = () => {
-    props.onUpdate();
     let colorAddtoCart = modalProductColor.find((color) => color.active);
     let sizeAddtoCart = modalProductSize.find((size) => size.active);
 
@@ -130,7 +136,7 @@ const ShopProductCard = (props) => {
       inStock: props.inStock,
     };
 
-    let isInCart = props.onCart.find((product) => product[1].id === props.id);
+    let isInCart = onCart.find((product) => product[1].id === props.id);
     if (!isInCart) {
       fetch("https://azeno-3045b-default-rtdb.firebaseio.com/cart.json", {
         method: "POST",

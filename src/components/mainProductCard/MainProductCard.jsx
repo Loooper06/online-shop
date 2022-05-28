@@ -41,6 +41,8 @@ const MainProductCard = (props) => {
     { id: 4, size: "XL", active: false },
   ]);
   const [productAmount, setProductAmount] = useState(1);
+  const [inCart, setInCart] = useState(false);
+  const [checkValidate , setCheckValidate] = useState(false)
   // Effects
 
   useEffect(() => {
@@ -55,6 +57,16 @@ const MainProductCard = (props) => {
     }
     setMainImages(mainUpdatedImages);
   }, []);
+
+  useEffect(() => {
+    fetch("https://azeno-3045b-default-rtdb.firebaseio.com/cart.json")
+      .then((response) => response.json())
+      .then((data) => {
+        let cartProducts = Object.entries(data);
+        let isInCart = cartProducts.find((product) => product[1].id === id);
+        isInCart !== undefined ? setInCart(true) : setInCart(false);
+      });
+  }, [checkValidate]);
 
   //Functions
   //Img Active
@@ -134,7 +146,46 @@ const MainProductCard = (props) => {
 
   // Add to Cart
 
-  const addToCart = () => {};
+  const addToCart = () => {
+    let colorAddtoCart = mainProductColor.find((color) => color.active);
+    let sizeAddtoCart = mainProductSize.find((size) => size.active);
+
+    let mainProduct = {
+      id: id,
+      title: title,
+      img: img,
+      amount: productAmount,
+      color: colorAddtoCart.color,
+      size: sizeAddtoCart.size,
+      price: price,
+      categoryGender: categoryGender,
+      discount: discount,
+      inStock: inStock,
+    };
+    
+    !inCart
+      ? fetch("https://azeno-3045b-default-rtdb.firebaseio.com/cart.json", {
+          method: "POST",
+          body: JSON.stringify(mainProduct),
+        }).then((response) => {
+          if (response.status === 200) {
+            Swal.fire({
+              icon: "success",
+              title: "Successfully Product Added to Cart",
+            });
+          } else {
+            Swal.fire({
+              icon : 'danger',
+              title : 'SomeThing Went Wrong :('
+            })
+          }
+        })
+      : Swal.fire({
+        icon : 'warning',
+        title : 'Product Already Added to Cart'
+      });
+      setCheckValidate(prev => !prev)
+  };
 
   const Toast = Swal.mixin({
     toast: true,
@@ -143,7 +194,7 @@ const MainProductCard = (props) => {
     timer: 3000,
     timerProgressBar: true,
   });
-
+  
   return (
     <>
       <Container fluid>
@@ -264,11 +315,11 @@ const MainProductCard = (props) => {
                   <Col xs={12} sm={8} xl={8}>
                     <div className=" mainProductSubmit">
                       <button
-                        onClick={() => addToCart(id)}
+                        onClick={() => addToCart()}
                         className="border py-3 w-100 py-2 addToCartSubmitButton"
                         disabled={inStock == 0}
                       >
-                        Add to Cart
+                        {inCart ? "Already Added to Cart" : "Add to Cart"}
                       </button>
                     </div>
                   </Col>
