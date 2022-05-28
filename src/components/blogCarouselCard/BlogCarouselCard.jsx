@@ -6,7 +6,7 @@ import "./BlogCarouselCard.css";
 
 const BlogCarouselCard = (props) => {
   return (
-    <div className="blogCarouselCard">
+    <div className="blogCarouselCard my-4">
       <Link to={`/blog/${props.id}`}>
         <div className="blogCarouselCardImg">
           <img src={props.img} alt="Blog" />
