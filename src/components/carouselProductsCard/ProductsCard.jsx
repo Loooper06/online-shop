@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Rating, Button, ButtonGroup } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Modal, Container, Row, Col } from "react-bootstrap";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
@@ -59,7 +59,7 @@ const ProductsCard = (props) => {
     if (props.subImg_2 && subImg_2Exist === undefined) {
       modalUpdatedImages.push({ id: 4, img: props.subImg_2, active: false });
     }
-    if( props.subImg_1 && subImg_1Exist === undefined) {
+    if (props.subImg_1 && subImg_1Exist === undefined) {
       modalUpdatedImages.push({ id: 3, img: props.subImg_1, active: false });
     }
     setModalImages(modalUpdatedImages);
@@ -112,11 +112,7 @@ const ProductsCard = (props) => {
   let priceAfterDiscount = afterDiscount.toFixed(2);
 
   const addToCart = () => {
-    if(props.onUpdate) {
-      props.onUpdate()
-    } else {
-      
-    }
+    props.onUpdate();
     let colorAddtoCart = modalProductColor.find((color) => color.active);
     let sizeAddtoCart = modalProductSize.find((size) => size.active);
 
@@ -138,37 +134,34 @@ const ProductsCard = (props) => {
       fetch("https://azeno-3045b-default-rtdb.firebaseio.com/cart.json", {
         method: "POST",
         body: JSON.stringify(mainProduct),
-      })
-        .then((response) => {
-          response.json()
-          if(response.status === 200) {
-            Toast.fire({
-              icon : 'success',
-              title : 'Product successfully added to your shopping cart'
-            })
-          }
-        })
+      }).then((response) => {
+        response.json();
+        if (response.status === 200) {
+          Toast.fire({
+            icon: "success",
+            title: "Product successfully added to your shopping cart",
+          });
+        }
+      });
     }
 
-    setQuickShow(false)
+    setQuickShow(false);
   };
 
   const Toast = Swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: "top-end",
     showConfirmButton: false,
     timer: 3000,
     timerProgressBar: true,
-  })
+  });
 
   return (
     <div className="productCard" key={props.id}>
       <div className="productCardImg">
         <img src={props.img} alt="product" />
         <div className="productCardQuickOptions">
-          <button
-          onClick={() => addToCart()} 
-          className="OptionsButton">
+          <button onClick={() => addToCart()} className="OptionsButton">
             <ShoppingBagOutlinedIcon />
           </button>
           <button className="OptionsButton">
