@@ -1,0 +1,8 @@
+.ShopProductCard {
+    width: 240px;
+    margin: 10px;
+}
+
+.shopCardFwLight *{
+    font-weight: 300!important;
+}

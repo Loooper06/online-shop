@@ -1,0 +1,21 @@
+.burgerMenu {
+    text-align: right;
+}
+
+.burgerContent { 
+    padding: 15px 30px;
+}
+
+.burgerContentListItem {
+    padding: 15px 0;
+    border-bottom:1px solid #cecece;
+}
+
+.burgerDrawerHeader {
+    width: 320px;
+    padding: 15px 30px;
+}
+
+.burgerContentListItem:last-of-type {
+    border-bottom: none;
+}

@@ -1,0 +1,359 @@
+.featurs {
+    width: 100%;
+}
+
+.featuresList {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.featuresListItem {
+    margin: 0 10px;
+}
+
+.cartButton,
+.favoritesButton,
+.signUpButton {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    outline: none;
+}
+
+.cartButton svg,
+.favoritesButton svg,
+.signUpButton svg {
+    font-size: 27px;
+}
+
+/* Cart Drawer */
+
+/* Cart Drawer Header */
+.DrawerHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    padding: 15px 30px;
+    border-bottom: 1px solid #cecece;
+}
+
+.cartDrawerContext {
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.cartCloseButton button {
+    border: none;
+    background-color: #cecece;
+    padding: 9px 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.cartCloseButton button svg {
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+}
+
+.cartCloseButton button:hover svg {
+    transform: rotate(180deg) scale(1.1);
+    color: #564;
+}
+
+/* Cart Drawer Content */
+
+.cartDrawerProductWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0px 0;
+    padding: 20px 10px;
+    border-bottom: 1px solid #cecece;
+}
+
+.cartDrawerProductImg {
+    width: 150px;
+    height: 150px;
+}
+
+.cartDrawerProductImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartDrawerProductDetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.drawerCartProductSize {
+    font-weight: 300;
+}
+
+.drawerCartProductColor {
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.drawerCartProductColorBox {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.drawerCartProductDiscount {
+    font-weight: 300;
+}
+
+.drawerCartProductPriceWrapper {
+    font-weight: 300;
+}
+
+.drawerCartProductPrice {
+    color: #f11d22;
+}
+
+.cartProductDelete {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #940828;
+    transition: all .3s ease;
+}
+
+.cartProductDelete:hover {
+    color: #ff4470;
+}
+
+/* Cart Empty */
+
+.CartDrawerEmptyWrapper {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.CartDrawerEmptyWrapper svg {
+     font-size: 80px;
+     margin: 20px 0;
+     color: #940828;
+}
+
+.CartDrawerEmptyWrapper h2 {
+    font-weight: 300;
+}
+
+/* Cart Drawer CheckOut */
+
+.cartCheckOut {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.totalPrice {
+    padding: 15px 30px;
+    background-color: #1F1F2D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalPrice h4 {
+    font-weight: 700;
+    color: #fff;
+}
+
+.totalPrice h5 {
+    background-color: #6F2250;
+    color: #fff;
+    padding: 7px 12px;
+    border-radius: 4px;
+}
+
+.cartFeaturesButton {
+    padding: 15px 30px;
+}
+
+.cartLinkButton {
+    width: 100%;
+    margin: 13px 0;
+    text-align: center;
+    border: 1px solid #4D2864;
+    padding: 10px 0;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+    background-color: #fff;
+    color: #4D2864;
+}
+
+.cartLinkButton:hover {
+    background-color: #4D2864;
+    color: #fff;
+}
+
+.checkOutLinkButton {
+    width: 100%;
+    margin: 13px 0;
+    text-align: center;
+    background-color: #fff;
+    color: #940828;
+    border: 1px solid #940828;
+    padding: 10px 0;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+
+.checkOutLinkButton:hover {
+    background-color: #940828;
+    color: #fff;
+}
+
+@media screen and (max-width : 1200px) {
+    .checkOutLinkButton {
+        background-color: #940828;
+        color: #fff;
+    }
+
+    .cartLinkButton {
+        background-color: #4D2864;
+        color: #fff;
+    }
+}
+
+/* SignUp Drawer */
+
+.switcher {
+    width: 400px;
+    padding: 15px 30px;
+}
+
+.switcherWrapper {
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px -10px #888;
+}
+
+.switchSide {
+    padding: 15px 5px;
+    border-radius: 25px;
+    width: 50%;
+    background-color: inherit;
+    text-align: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.switchSelector {
+    width: 50%;
+    height: auto;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #cecece5b;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+.transformRight {
+    transform: translateX(100%);
+}
+
+.transformLeft {
+    transform: translateX(0);
+}
+
+.sign_in {
+    padding: 15px 30px;
+    width: 400px;
+}
+.sign_up {
+    width: 400px;
+    padding: 15px 30px;
+}
+
+.sign_in_submit {
+    padding: 15px 30px;
+}
+
+.sign_in_submitButton {
+    border: none;
+    width: 100%;
+    background-color: #222222;
+    transition: all .3s;
+    color: #fff;
+    padding: 13px 0;
+    border-radius: 4px;
+}
+
+.sign_in_submitButton:hover {
+    background-color: #f11d22;
+}
+
+.forgetPass {
+    margin-top: 20px;
+}
+
+.forgetPass a {
+    transition: all .3s;
+}
+
+.forgetPass a:hover {
+    color: #f11d22;
+}
+
+.visibalePass {
+    cursor: pointer;
+}
+
+.subLinks {
+     width: 400px;
+     padding: 15px 30px;
+}
+
+.subLinksList{
+    margin: 0;
+    padding: 0;
+}
+
+.subLinksItem {
+    transition: all .3s;
+    margin: 5px 5px;
+    padding: 9px 0;
+    border-bottom: 1px solid #cecece;
+}
+
+/* .subLinksItem {
+    width: 100%;
+} */
+
+.subLinksItem:hover {
+    color: #f11d22;
+}
+
+.subLinksItem:last-of-type {
+    border-bottom: none;
+}
+
+.subLinksIcon {
+    margin-right: 10px;
+}

@@ -1,0 +1,72 @@
+.signupHeader {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #cecece;
+}
+
+.signupWrapper {
+    padding: 50px 10px;
+}
+
+.signupForm {
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 0 15px -10px #222222;
+}
+
+.signupForm * {
+    font-weight: 300;
+}
+
+.signupForm input {
+    font-weight: 300;
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    background-color: #f9f9f9;
+}
+
+.signupForm input::placeholder {
+    font-weight: 300;
+}
+
+.signinLink {
+    font-size: 15px;
+}
+
+.signupFields {
+    padding: 0 20px;
+    margin: 30px 0;
+}
+
+.birthDateEx {
+    font-size: 13px;
+    margin: 5px 15px;
+}
+
+.customerPrivacyNotice {
+    padding: 0 30px;
+}
+
+.optionalTag {
+    font-size: 12px;
+    background-color: #F11D22;
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 4px;
+}
+
+.formSubmit {
+    text-align: right;
+}
+
+.essential {
+    color: #F11D22;
+    font-weight: 500;
+    margin-left: 3px;
+}

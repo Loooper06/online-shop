@@ -1,0 +1,31 @@
+.shopCategoryCarousel {
+    width: 50%;
+}
+
+.categoryItemImg {
+    width: 100%;
+    border-radius: 50%;
+    transition: border .3s;
+}
+
+.categoryItem:hover .categoryItemImg {
+    border: 1px solid #cecece;
+}
+
+.categoryItemImg img {
+    padding: 2px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categoryItemTitle {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.categoryItemTitle h6 {
+    font-weight: 300;
+}

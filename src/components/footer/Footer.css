@@ -1,0 +1,50 @@
+.footer {
+    background-color: #222222;
+    padding: 50px 0;
+    color: #fff;
+    margin-top: 100px;
+}
+
+.footerItemNewsLetterContext {
+    font-size: 14px;
+    font-weight: 300;
+    color: #cecece;
+    margin: 30px 0;
+}
+
+.footerItemsNewsLetterSubscribe {
+    width: 100%;
+    position: relative;
+    margin: 30px 0;
+}
+
+.newsLetterSubscribeTextArea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cecece;
+    padding: 10px 0;
+    color: #fff;
+    outline: none!important;
+    font-weight: 300;
+}
+
+.newsLetterSubscribeTextArea::placeholder {
+    color: #cecece;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.newsLetterSubscribeSubmitButton {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    transition: all .3s ease;
+}
+
+.newsLetterSubscribeSubmitButton:hover {
+    color: #ff4a5d;
+}

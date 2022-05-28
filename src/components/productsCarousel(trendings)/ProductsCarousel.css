@@ -1,0 +1,423 @@
+.ProductsCarousel {
+    width: 100%;
+    margin: 90px 0;
+}
+
+.CarouselWrapper {
+    text-align: center;
+    position: relative;
+}
+
+.trendingCarousel {
+    margin-top: 40px;
+    height: max-content;
+    overflow-x: hidden;
+}
+
+.OwlPrev {
+    box-shadow: 0 0 15px -10px #566;
+    position: absolute;
+    z-index: 30;
+    padding: 5px 10px;
+    font-size: 25px;
+    top: 35%;
+    left: 10px;
+    border: none;
+    border-radius: 25%;
+    background-color: #fff;
+    color: #444;
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.OwlNext {
+    box-shadow: 0 0 15px -10px #566;
+    position: absolute;
+    z-index: 30;
+    padding: 5px 10px;
+    font-size: 25px;
+    top: 35%;
+    right: 10px;
+    border: none;
+    border-radius: 25%;
+    background-color: #fff;
+    color: #444;
+    transform: translateX(30px);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.trendingCarousel:hover .OwlNext {
+    opacity: 1;
+    transform: rotateX(0);
+}
+
+.trendingCarousel:hover .OwlPrev {
+    opacity: 1;
+    transform: rotateX(0);
+}
+
+.ProductsCarouselTitle h1 {
+    font-size: 50px;
+    position: relative;
+}
+
+.ProductsCarouselTitle h1::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #c30c1e;
+    position: absolute;
+    bottom: 10px;
+}
+
+.productCardImg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 1;
+    transition: all .3s ease-in;
+}
+
+.productCardImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.productCardSubImg {
+    position: absolute;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.productCard:hover .productCardSubImg {
+    opacity: 1;
+}
+
+.productCardTags {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.productCardTags span {
+    margin: 0 5px;
+}
+
+.discountTag {
+    background-color: #AF1B2B;
+    padding: 3px 5px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.outOfStock {
+    background-color: #FF7004;
+    padding: 3px 5px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.productCardCategory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+.productCardTitle {
+    margin-top: 10px;
+    text-align: left;
+    padding: 0 5px;
+}
+
+.productCard:hover .productCardTitle {
+    color: #e20017;
+}
+
+.productCardPrice {
+    margin-top: 10px;
+    padding: 0 5px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.corePrice {
+    text-decoration: line-through;
+    color: #6C757D;
+    margin-right: 15px;
+}
+
+.productCardQuickOptions {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 93;
+}
+
+.OptionsButton {
+    margin: 5px;
+    background-color: #fff;
+    border: none;
+    padding: 10px 15px;
+    box-shadow: 0 0 -15px 10px #000;
+    color: #6C757D;
+    font-weight: 100;
+    opacity: 0;
+    transition: all .2s ease-in;
+    border-radius: 4px;
+}
+
+.OptionsButton:hover {
+    background-color: #AF1B2B;
+    color: #fff;
+}
+
+.productCard:hover .OptionsButton {
+    opacity: 1;
+}
+
+.OptionsButton svg {
+    font-size: 20px;
+    font-weight: 100 !important;
+}
+
+@media screen and (max-width : 1200px) {
+    .OptionsButton {
+        opacity: 1;
+    }
+}
+
+/* quickShow Modal */
+
+.quickModal {
+    z-index: 999999 !important;
+}
+
+.quickModalCloseButton {
+    border: none;
+    background-color: #fff;
+    color: #444;
+    transition: all .25s ease-in;
+}
+
+.quickModalCloseButton:hover {
+    transform: rotate(180deg);
+}
+
+.modalMainImg {
+    width: 100%;
+    height: 100%;
+}
+
+.modalMainImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modalSubImg {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.SubImg {
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.Bordered {
+    border: 2px solid #666;
+}
+
+.SubImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.modalProductPrice h4 {
+    font-weight: 700;
+}
+
+.modalProductPrice {
+    display: flex;
+}
+
+.modalProductDetail {
+    margin-top: 30px;
+}
+
+.modalProductTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detailItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailHead {
+    font-weight: 500;
+}
+
+.detailContent {
+    margin-left: 20px;
+    color: #90979d;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.modalProductDescription {
+    margin-top: 30px;
+    color: #90979d;
+    font-weight: 300;
+}
+
+.modalProductColorPick {
+    display: flex;
+    margin-top: 30px;
+}
+
+.modalProductSize {
+    margin-top: 30px;
+    display: flex;
+}
+
+.colorPickHead ,
+.SizeHead {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.colorPickList {
+    display: flex;
+    margin-left: 20px !important;
+}
+.SizeList {
+    display: flex;
+    margin-left: 20px !important;
+}
+
+.colorPickList li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+}
+
+.colorPickListItem {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.SizeList li {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    font-size: 19px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.green {
+    background-color: rgb(14, 174, 0);
+}
+
+.pink {
+    background-color: #c80096;
+}
+
+.yellow {
+    background-color: #c7ce00;
+}
+
+.orange {
+    background-color: #FF7004;
+}
+
+.modalProductAddtoCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin: 15px 0;
+    border-top: 1px dashed #cecece;
+    border-bottom: 1px dashed #cecece;
+}
+
+.modalProductAmount {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.modalProductSubmit {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.addToCartSubmitButton {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    transition: all .3s ease;
+    width: 100%;
+    font-weight: 300;
+}
+
+.addToCartSubmitButton:hover {
+    background-color: #AF1B2B;
+}
+
+.modalProductAddWishlist {
+    margin: 10px 0;
+}
+
+.addProductToWishlist {
+    border: none;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    font-weight: 300;
+    transition: all .3s ease;
+    border-radius: 4px;
+}
+
+.addProductToWishlist:hover {
+    background-color: #AF1B2B;
+}
+
+.addProductToWishlist svg {
+    margin-right: 10px;
+}

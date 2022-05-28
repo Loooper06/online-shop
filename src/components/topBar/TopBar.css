@@ -1,0 +1,44 @@
+.topbar {
+    height: 90px;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid #cecece;
+}
+
+/* Nav Links */
+
+.navLinks {
+    text-align: left;
+}
+
+.navLinksList {
+    display: flex;
+    align-items: center;
+}
+
+.navLinksItem {
+    margin: 0 15px;
+    transition: all .3s;
+    position: relative;
+}
+
+.navLinksItem a {
+    font-weight: 500;
+}
+
+.navLinksItem:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ff7004;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+
+.navLinksItem:hover:after {
+    width: 100%
+}

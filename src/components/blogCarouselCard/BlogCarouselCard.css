@@ -1,0 +1,115 @@
+.blogCarouselCard {
+    text-align: left;
+    box-shadow: 0 0 7px #cecece;
+    min-height: 580px!important;
+    max-height: max-content;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.blogCarouselCardImg {
+    position: relative;
+    overflow: hidden;
+}
+
+.blogCarouselCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease;
+}
+
+.blogCarouselCard:hover .blogCarouselCardImg img {
+    transform: scale(1.15) rotate(3deg);
+}
+
+.blogCarouselCardImgOverlay {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogCarouselCardImgOverlayDate {
+    width: 50%;
+    height: max-content;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+    background-color: #222;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.blogCarouselCardImgOverlayAuthor {
+    width: 50%;
+    text-align: right;
+    padding: 10px 15px;
+    height: max-content;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.blogCarouselCardImgOverlayDate svg,
+.blogCarouselCardImgOverlayAuthor svg{
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.blogCarouselCardBody {
+    height: 100%;
+    padding: 20px 10px;
+}
+
+.blogCarouselCardTitle:hover {
+    color: #FF3535;
+}
+
+.blogCarouselCardTitle{
+    margin: 10px 0;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.blogCarouselCardDecription p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.blogCarouselCardReadMore {
+    margin: 30px 0 0 0;
+}
+
+.blogCarouselCardReadMore a{
+    font-size: 18px;
+    font-weight: 300;
+    transition: all .3s;
+    padding: 10px;
+    border-radius: 4px;
+    color: #FF3535!important;
+    border: 1px solid #FF3535;
+}
+
+.blogCarouselCardReadMore a:hover{
+    color: #fff!important;
+    background-color: #FF3535;
+}
+
+@media screen and (max-width: 378px) {
+    .blogCarouselCardImgOverlayDate ,
+    .blogCarouselCardImgOverlayAuthor {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 345px) {
+    .blogCarouselCardImgOverlayDate ,
+    .blogCarouselCardImgOverlayAuthor {
+        font-size: 11px;
+    }
+}

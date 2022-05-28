@@ -1,0 +1,153 @@
+.loginHeader {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #cecece;
+}
+
+.loginWrapper {
+    padding: 50px 0;
+}
+
+.loginForm {
+    width: 40%;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 0 15px -10px #222222;
+}
+
+.loginForm * {
+    font-weight: 300;
+}
+
+.loginForm input {
+    font-weight: 300;
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    background-color: #f9f9f9;
+}
+
+.loginForm input::placeholder {
+    font-weight: 300;
+}
+
+.formInputWrapper {
+    position: relative;
+}
+
+.formInputWrapper svg {
+    color: #222222;
+}
+
+.showPass {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    padding-top: 10px;
+}
+
+.recoveryPasswordLink {
+    margin-top: 30px;
+}
+
+.recoveryPasswordLink a {
+    transition: all .3s ease;
+}
+
+.recoveryPasswordLink a:hover {
+    color: #F11D22!important;
+}
+
+.formSubmit {
+    margin-top: 20px;
+}
+
+.formSubmitButton {
+    padding: 10px 40px;
+    border: none;
+    background-color: #F11D22;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.passRecoveryHeader {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #cecece;
+}
+
+.passRecoveryWrapper {
+    padding: 50px 0;
+}
+
+.passRecoveryForm {
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 0 15px -10px #222222;
+}
+
+.passRecoveryForm * {
+    font-weight: 300;
+}
+
+.passRecoveryForm input {
+    font-weight: 300;
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    background-color: #f9f9f9;
+}
+
+.passRecoveryForm input::placeholder {
+    font-weight: 300;
+}
+
+.formInputWrapper {
+    position: relative;
+}
+
+.formInputWrapper svg {
+    color: #222222;
+}
+
+.passRecoverySubmitButton {
+    margin-top: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F11D22;
+    color: #fff;
+    padding: 10px 40px;
+}
+
+.loginFooter {
+    padding: 20px 0;
+    border-top: 1px solid #cecece;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.loginFooter a {
+    transition: all .3s ease;
+}
+
+.loginFooter a:hover {
+    color: #F11D22!important;
+}
+
+.emptyField {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #F11D22;
+}

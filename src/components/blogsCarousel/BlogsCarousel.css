@@ -1,0 +1,43 @@
+.blogsCarousel {
+    margin: 20px 0;
+}
+
+.blogsCarouselWrapper {
+    text-align: center;
+}
+
+.blogsCarouselTitle h1 {
+    font-size: 50px;
+    position: relative;
+}
+
+.blogsCarouselTitle h1::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #c30c1e;
+    position: absolute;
+    bottom: 10px;
+}
+
+.owl-stage-outer {
+    padding: 15px 0!important;
+}
+
+.viewMoreBlogs {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.viewMoreBlogs a {
+    padding: 15px 55px;
+    border: 1px solid #2222;
+    color: #222!important;
+    transition: all .3s ease;
+    background-color: #fff!important;
+}
+
+.viewMoreBlogs a:hover {
+    color: #fff!important;
+    background-color: #222!important;
+}

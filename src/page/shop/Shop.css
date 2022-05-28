@@ -1,0 +1,144 @@
+.shopHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid #cecece;
+    padding: 20px 0;
+}
+
+.topCategoryPicker {
+    border: 1px solid #cecece;
+}
+
+.topCategoryPickerHeader {
+    padding: 15px 15px;
+    border-bottom: 1px solid #cecece;
+}
+
+.topCategoryPickerContent {
+    margin: 15px 0;
+    padding: 0px 20px;
+}
+
+.topCategoryPickerContent a {
+    font-weight: 300;
+}
+
+.accordionSvgColored {
+    color: #FF3535 !important;
+}
+
+.topCategoryPickerSubList li {
+    margin: 15px 20px;
+    border-left: 1px dashed #cecece;
+    padding: 0 10px;
+}
+
+.topCategoryFilter {
+    border: 1px solid #cecece;
+    margin-top: 30px;
+}
+
+.topCategoryFilterContent p,
+.topCategoryFilter span {
+    font-weight: 300;
+}
+
+.topCategoryFilterHeader {
+    padding: 15px 15px;
+    border-bottom: 1px solid #cecece;
+}
+
+.topCategoryFilterContent {
+    margin: 15px 0;
+    padding: 0px 20px;
+}
+
+.topCategoryFilterContent a {
+    font-weight: 300;
+}
+
+.accordionSvgColored {
+    color: #FF3535 !important;
+}
+
+.topCategoryFilterSubList li {
+    margin: 15px 30px;
+}
+
+.newProducts {
+    margin-top: 30px;
+    border: 1px solid #cecece;
+}
+
+.newProductsHeader {
+    padding: 15px;
+    border-bottom: 1px solid #cecece;
+}
+
+.newProductsContent {
+    margin-top: 20px;
+}
+
+.newProductItem {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px dashed #cecece;
+}
+
+.newProductItemImg {
+    width: 150px;
+}
+
+.newProductItemImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.newProductItemDetails {
+    margin-left: 20px;
+}
+
+.newProductItemTitle h6 {
+    font-weight: 300;
+}
+
+.newProductItemPrice {
+    font-weight: 300;
+    display: flex;
+}
+
+.newProductItemDiscountedPrice {
+    margin-left: 10px;
+}
+
+.discounted {
+    text-decoration: line-through;
+}
+
+/* Empty Of Products */
+
+.EmptyProduct {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.EmptyProduct h1 {
+    background: url('./textBg.jpg');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    font-size: 60px;
+    background-size: contain;
+    background-position: center center;
+}
+
+.EmptyProduct p {
+    font-weight: 300;
+}
