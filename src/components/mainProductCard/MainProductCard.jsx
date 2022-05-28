@@ -41,7 +41,6 @@ const MainProductCard = (props) => {
     { id: 4, size: "XL", active: false },
   ]);
   const [productAmount, setProductAmount] = useState(1);
-
   // Effects
 
   useEffect(() => {
@@ -304,9 +303,9 @@ const MainProductCard = (props) => {
                   <BeenhereOutlinedIcon />
                   <h5 className="me-4 ms-2">Tags : </h5>
                   <Breadcrumbs aria-label="breadcrumb" separator=",">
-                    <Typography color="text.primary">mamd</Typography>
-                    <Typography color="text.primary">ali</Typography>
-                    <Typography color="text.primary">amir</Typography>
+                    <Typography color="text.primary">Clothes</Typography>
+                    <Typography color="text.primary">Fitness</Typography>
+                    <Typography color="text.primary">Tech</Typography>
                   </Breadcrumbs>
                 </div>
               </div>
@@ -353,27 +352,6 @@ const MainProductCard = (props) => {
               </div>
             </div>
           </Col>
-        </Row>
-      </Container>
-      <Container fluid>
-        <Row>
-          <Col xs={12} md={4} className='ps-5'>
-            <div className="mainProductOptionsTitles">
-              <div className="mainProductOptionTitle">
-                <h5>Description</h5>
-              </div>
-              <div className="mainProductOptionTitle">
-                <h5>Product Details</h5>
-              </div>
-              <div className="mainProductOptionTitle">
-                <h5>Comment's</h5>
-              </div>
-              <div className="mainProductOptionTitle">
-                <h5>Reviews</h5>
-              </div>
-            </div>
-          </Col>
-          <Col xs={12} md={8} className='pe-5'></Col>
         </Row>
       </Container>
     </>
