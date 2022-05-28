@@ -312,29 +312,29 @@ const MainProductCard = (props) => {
             <div className="mainProductSubDetail">
               <div className="mainProductSubDetailItem">
                 <div className="subDetailItemImg">
-                  <img src="./image/securityProductDetail.jpg" alt="" />
+                    <img src="/image/securityProductDetail.jpg" alt="Security" />
                 </div>
                 <div className="subDetailItemContext">
-                  <article>asfasf</article>
-                  <article>asfasf</article>
+                  <article>Security policy</article>
+                  <article>(edit with the Customer Reassurance module)</article>
                 </div>
               </div>
               <div className="mainProductSubDetailItem">
                 <div className="subDetailItemImg">
-                  <img src="" alt="" />
+                  <img src="/image/deliveryProductDetail_1.jpg" alt="Delivery" />
                 </div>
                 <div className="subDetailItemContext">
-                  <article></article>
-                  <article></article>
+                  <article>Delivery policy</article>
+                  <article>(edit with the Customer Reassurance module)</article>
                 </div>
               </div>
               <div className="mainProductSubDetailItem">
                 <div className="subDetailItemImg">
-                  <img src="" alt="" />
+                  <img src="/image/policyProductDetail.jpg" alt="Policy" />
                 </div>
                 <div className="subDetailItemContext">
-                  <article></article>
-                  <article></article>
+                  <article>Return policy</article>
+                  <article>(edit with the Customer Reassurance module)</article>
                 </div>
               </div>
             </div>
