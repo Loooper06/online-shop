@@ -27,6 +27,7 @@ import KidsJeans from './page/shop/kidsCategory/kidsJeans/KidsJeans';
 import KidsScarves from './page/shop/kidsCategory/kidsScarves/KidsScarves';
 import KidsSunglasses from './page/shop/kidsCategory/kidsSunglasses/KidsSunglasses';
 import PassRecovery from './page/login/PassRecovery';
+import MainBlog from './page/mainBlog/MainBlog'
 
 
 let routes = [
@@ -63,7 +64,7 @@ let routes = [
     ] },
     { path: '/register', element: <Register /> },
     {path : '/product/:productID' , element : <MainProduct/>},
-    //{path : '/Blog/:blogID' , element : <MainBlog/>},
+    {path : '/Blog/:blogID' , element : <MainBlog/>},
     // { path: '/favorites', element: <Favorites /> },
 ];
 

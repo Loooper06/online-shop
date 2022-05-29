@@ -1,0 +1,72 @@
+.mainBlogHeader {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #cecece;
+}
+
+.statusBarItem {
+    font-size: 14px;
+}
+
+.statusBarItem svg {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+}
+
+.mainBlogImg {
+    text-align: center;
+}
+
+.mainBlogImg img {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.mainBlogShareOptionList {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mainBlogShareOptionListItem {
+    margin: 7px;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 4px;
+}
+
+.Twitter {
+    background-color: #4BA0EC;
+}
+
+.FaceBook {
+    background-color: #415994;
+}
+
+.Pinterest {
+    background-color: #AE2626;
+}
+
+.Instagram {
+    background: rgb(255, 183, 0);
+    background: linear-gradient(209deg, rgba(255, 183, 0, 1) 0%, rgba(203, 24, 24, 0.8746849081429446) 100%);
+}
+
+.Telegram {
+    background-color: #2BA0D9;
+}
+
+.WhatsApp {
+    background-color: #23BAA2;
+}
+
+.EmptyComments {
+    background-color: #FFE1CB;
+    border-radius: 4px;
+    border: 1px solid #fbb17c;
+}
