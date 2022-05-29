@@ -31,6 +31,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .mainBlogShareOptionListItem {
@@ -65,8 +66,129 @@
     background-color: #23BAA2;
 }
 
+.mainBlogComment {
+    margin-top: 50px !important;
+}
+
 .EmptyComments {
     background-color: #FFE1CB;
     border-radius: 4px;
     border: 1px solid #fbb17c;
+}
+
+.commentBox {
+    width: 50%;
+    font-weight: 300;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+
+.CommentReply {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #dedede;
+    border-radius: 4px;
+    text-align: right;
+}
+
+.CommentReply svg {
+    color: #737373;
+    margin: 5px 15px;
+}
+
+.userComment {
+    margin: 0 30px;
+}
+
+.userName {
+    color: #999;
+}
+
+.commentContent {
+    display: flex;
+    margin-top: 7px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.commnetContext {
+    margin: 0 25px;
+}
+
+.mainBlogAddComment {
+    text-align: right;
+}
+
+.mainBlogAddComment h6 {
+    margin: 15px 0;
+    color: #333;
+    font-weight: 300;
+}
+
+.mainBlogAddComment input {
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #cecece;
+    font-weight: 300;
+}
+
+.mainBlogAddComment textarea {
+    font-weight: 300;
+    border: 1px solid #cecece;
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+    resize: vertical;
+    border-radius: 4px;
+}
+
+.addCommentButton {
+    border: none;
+    background-color: #F11D22;
+    transition: all .3s ease;
+    padding: 10px 50px;
+    margin: 20px 0;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 4px;
+}
+
+@media screen and (max-width : 992px) {
+    .commentBox {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .commentBox {
+        width: 90%;
+    }
+    .mainComment {
+        flex-wrap: wrap;
+    }
+    .userComment{
+        margin-top: 20px;
+    }
+    .CommentReply {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 576px) {
+    .commentBox {
+        width: 100%;
+    }
+
+    .commentContent {
+        flex-wrap: wrap;
+    }
+    
+    .commnetContext{
+        margin-top: 20px;
+    }
 }

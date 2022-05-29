@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Breadcrumbs, Typography } from "@mui/material";
+import { Breadcrumbs, Typography, Avatar } from "@mui/material";
 import { Container, Row, Col } from "react-bootstrap";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import PersonPinIcon from "@mui/icons-material/PersonPin";
@@ -12,6 +12,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import ShortcutIcon from "@mui/icons-material/Shortcut";
 import "./MainBlog.css";
 
 const MainBlog = () => {
@@ -68,7 +69,6 @@ const MainBlog = () => {
         setMainBlog(blog[1]);
       });
   }, []);
-  console.log(mainBlog);
 
   return (
     <>
@@ -148,7 +148,10 @@ const MainBlog = () => {
                 <h4>Share this Post</h4>
                 <ul className="mainBlogShareOptionList">
                   {shareOptions.map((option) => (
-                    <li className={`mainBlogShareOptionListItem ${option.title}`} key={option.id}>
+                    <li
+                      className={`mainBlogShareOptionListItem ${option.title}`}
+                      key={option.id}
+                    >
                       <a href={option.path}>
                         {option.icon} {option.title}
                       </a>
@@ -156,17 +159,62 @@ const MainBlog = () => {
                   ))}
                 </ul>
               </Col>
-              <Col xs={12} className="mainBlogComment's mt-3 px-5">
+              <Col xs={12} className="mainBlogComment px-5">
                 <h5>Comment's</h5>
-                {mainBlog.comments.length > 0 ? (
-                  <div></div>
+                {mainBlog.comments > 0 ? (
+                  <div className="mt-4">
+                    <div className="commentBox">
+                      <div className="mainComment d-flex px-4">
+                        <div className="userImg">
+                          <Avatar src="/image/userComment_1-1.jpg" />
+                        </div>
+                        <div className="userComment">
+                          <p className="userName">Coby Brayan</p>
+                          <p className="userCommentText">
+                            Not Bad But it can better for sure in future Not Bad
+                            But it can better for sure in future Not Bad But it
+                            can better for sure in future
+                          </p>
+                        </div>
+                      </div>
+                      <div className="CommentReply">
+                        <ShortcutIcon />
+                        <div className="commentContent">
+                          <Avatar src="/image/userComment_1-3.jpg" />
+                          <div className="commnetContext">
+                            <p className="userName">Kazem Abdullah</p>
+                            <p className="userReply">
+                              Lorem ipsum dolor sit, amet consectetur
+                              adipisicing elit. At, quasi!
+                            </p>
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 ) : (
                   <div className="EmptyComments py-2 px-3 text-muted">
                     <p>No comments at this moment !</p>
                   </div>
                 )}
               </Col>
-              <Col xs={12} className="mainBlogAddComment"></Col>
+              <Col xs={12} className="mainBlogAddComment px-5 mt-3">
+                <h5 className="text-start">New Comment</h5>
+                <form className="mt-3 text-start">
+                  <h6>Your Name</h6>
+                  <input type="text" placeholder="Name ..." />
+                  <h6>Your Comment</h6>
+                  <textarea
+                    name="userComment"
+                    rows="7"
+                    placeholder="Comment ..."
+                  ></textarea>
+                </form>
+                <button type="submit" className="addCommentButton">
+                  Add New Comment
+                </button>
+              </Col>
             </Row>
           </Container>
         </div>
