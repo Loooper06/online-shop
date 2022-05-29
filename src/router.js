@@ -28,6 +28,7 @@ import KidsScarves from './page/shop/kidsCategory/kidsScarves/KidsScarves';
 import KidsSunglasses from './page/shop/kidsCategory/kidsSunglasses/KidsSunglasses';
 import PassRecovery from './page/login/PassRecovery';
 import MainBlog from './page/mainBlog/MainBlog'
+import Cart from './page/cart/Cart';
 
 
 let routes = [
@@ -57,6 +58,7 @@ let routes = [
         {path : 'tech' , element : <TechCategory/>},
     ]},
     { path: '/blog', element: <Blog /> },
+    {path : '/cart' , element : <Cart/>},
     { path: '/aboutus', element: <About /> },
     { path: '/contactus', element: <Contact /> },
     { path: '/login/*', element: <Login /> , children : [
