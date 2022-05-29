@@ -106,40 +106,42 @@ const CartDrawer = () => {
           <>
             <div className="DrawerContent">
               {drawerCartProducts.map((product) => (
-                <div className="cartDrawerProductWrapper" key={product[1].id}>
-                  <div className="cartDrawerProductImg">
-                    <img src={product[1].img} alt="CartProduct" />
-                  </div>
-                  <div className="cartDrawerProductDetail">
-                    <span>{product[1].title}</span>
-                    <span className="drawerCartProductSize">
-                      size : {product[1].size}
-                    </span>
-                    <div className="drawerCartProductColor">
-                      color :{" "}
-                      <div
-                        className={`drawerCartProductColorBox ${product[1].color}`}
-                      ></div>
+                <Link to={`/product/${product[1].id}`} key={product[1].id}>
+                  <div className="cartDrawerProductWrapper">
+                    <div className="cartDrawerProductImg">
+                      <img src={product[1].img} alt="CartProduct" />
                     </div>
-                    <span className="drawerCartProductDiscount">
-                      discount : {product[1].discount}%
-                    </span>
-                    <span className="drawerCartProductPriceWrapper">
-                      {product[1].amount} *{" "}
-                      <strong className="drawerCartProductPrice">
-                        $ {product[1].price}
-                      </strong>
-                    </span>
+                    <div className="cartDrawerProductDetail">
+                      <span>{product[1].title}</span>
+                      <span className="drawerCartProductSize">
+                        size : {product[1].size}
+                      </span>
+                      <div className="drawerCartProductColor">
+                        color :{" "}
+                        <div
+                          className={`drawerCartProductColorBox ${product[1].color}`}
+                        ></div>
+                      </div>
+                      <span className="drawerCartProductDiscount">
+                        discount : {product[1].discount}%
+                      </span>
+                      <span className="drawerCartProductPriceWrapper">
+                        {product[1].amount} *{" "}
+                        <strong className="drawerCartProductPrice">
+                          $ {product[1].price}
+                        </strong>
+                      </span>
+                    </div>
+                    <div className="cartDrawerProductDeleteButton">
+                      <button
+                        className="cartProductDelete"
+                        onClick={() => deleteCartProduct(product[0])}
+                      >
+                        <DeleteOutlineOutlinedIcon />
+                      </button>
+                    </div>
                   </div>
-                  <div className="cartDrawerProductDeleteButton">
-                    <button
-                      className="cartProductDelete"
-                      onClick={() => deleteCartProduct(product[0])}
-                    >
-                      <DeleteOutlineOutlinedIcon />
-                    </button>
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="cartCheckOut">
