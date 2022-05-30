@@ -106,8 +106,8 @@ const CartDrawer = () => {
           <>
             <div className="DrawerContent">
               {drawerCartProducts.map((product) => (
-                <Link to={`/product/${product[1].id}`} key={product[1].id}>
-                  <div className="cartDrawerProductWrapper">
+                <div className="cartDrawerProductWrapper border-bottom" key={product[1].id}>
+                  <Link to={`/product/${product[1].id}`} className="cartDrawerProductWrapper">
                     <div className="cartDrawerProductImg">
                       <img src={product[1].img} alt="CartProduct" />
                     </div>
@@ -132,16 +132,16 @@ const CartDrawer = () => {
                         </strong>
                       </span>
                     </div>
-                    <div className="cartDrawerProductDeleteButton">
-                      <button
-                        className="cartProductDelete"
-                        onClick={() => deleteCartProduct(product[0])}
-                      >
-                        <DeleteOutlineOutlinedIcon />
-                      </button>
-                    </div>
+                  </Link>
+                  <div className="cartDrawerProductDeleteButton">
+                    <button
+                      className="cartProductDelete"
+                      onClick={() => deleteCartProduct(product[0])}
+                    >
+                      <DeleteOutlineOutlinedIcon />
+                    </button>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
             <div className="cartCheckOut">
